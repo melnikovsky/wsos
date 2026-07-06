@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">{{ page.heading | default: site.title }}</h1>
+        <p class="site-lead">{{ page.lead | default: site.description }}</p>
+      </div>
+    </header>
+
+    <main class="container">
+      {% if page.show_back_home %}
+      <p><a href="{{ '/' | relative_url }}">Back home</a></p>
+      {% endif %}
+      {{ content }}
+    </main>
+
+    {% if page.footer %}
+    <footer class="site-footer">
+      <p>{{ page.footer }}</p>
+    </footer>
+    {% endif %}
+  </body>
+</html>

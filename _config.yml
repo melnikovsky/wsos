@@ -1,0 +1,6 @@
+title: Courses
+description: Courses taught at WSoS
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax

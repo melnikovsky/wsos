@@ -1,0 +1,44 @@
+:root {
+  --bg: #f2f7f5;
+  --text: #1e2328;
+  --muted: #5b6670;
+  --line: #cfd6dc;
+  --link: #1f5b9d;
+  --panel: #f4f6f8;
+}
+
+html,
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+.site-title {
+  color: var(--text);
+}
+
+.site-lead,
+.site-footer {
+  color: var(--muted);
+}
+
+.site-header,
+.site-footer {
+  background: var(--panel);
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: #5c3f8c;
+}
+
+main blockquote {
+  background: var(--panel);
+  border-left: 3px solid var(--line);
+}
