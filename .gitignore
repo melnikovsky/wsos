@@ -1,0 +1,13 @@
+# Jekyll build output
+_site/
+
+# Jekyll caches and metadata
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass cache
+.sass-cache/
+
+# Local Ruby/Bundler directories (if used later)
+.bundle/
+vendor/
